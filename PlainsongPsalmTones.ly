@@ -109,7 +109,9 @@ headLine = {
       
       \textMark "IV.1"
       \relative { \headLine a g a \[ b \pes a \] \once \hide NoteHead f
-                  \[ \cavum g\accentus \] g\accentus f \augmentum e }
+                  \[ \cavum g\accentus \] { \[ g\accentus \pes f \] } 
+                  \once \hide NoteHead f 
+                  \augmentum e }
       \finalis
       
       \textMark "IV.2"
@@ -157,12 +159,6 @@ headLine = {
     \new VaticanaVoice = "cantus" {
       \clef "vaticana-do2"
       \textMark "Tone VI"
-      \relative { f \[ g \pes a \] \headLine a bes\accentus \[ \cavum a \] a 
-                  g\accentus \[ \cavum a \] \augmentum a }
-      \divisioMaxima
-      \relative { \headLine a f  \[ g \pes a \] g\accentus \[ \cavum f \] \augmentum f}
-      \finalis s8 \finalis
-      \textMark "or"
       \relative { f \[ g \pes a \] \headLine a g a\accentus \[ \cavum f \] \augmentum f } 
       \divisioMaxima
       \relative { \headLine a f  \[ g \pes a \] g\accentus \[ \cavum f \] \augmentum f}
@@ -177,7 +173,9 @@ headLine = {
     \new VaticanaVoice = "cantus" {
       \clef "vaticana-do1"
       \textMark "Tone VII"
-      \relative { c' b c d \headLine d f\accentus \[ \cavum e \] e d\accentus \[ \cavum e \] \augmentum e }
+      \relative { \[ c' \pes b \] 
+                  \once \hide NoteHead b 
+                  \[ c \pes d \] \headLine d f\accentus \[ \cavum e \] e d\accentus \[ \cavum e \] \augmentum e }
       \divisioMaxima
       
       \textMark "VII.1"
@@ -241,15 +239,6 @@ headLine = {
       \divisioMaxima
       
       \relative { \headLine g d f\accentus \[ \cavum f \] \[ \augmentum { e \pes d } \] }
-
-      \finalis s8 \finalis
-
-      \textMark "or"
-      \relative { a bes \headLine a bes a g\accentus \[ \cavum f \] \augmentum f }
-      \divisioMaxima
-      
-      \relative { a bes \headLine g d f\accentus \[ \cavum f \] \[ \augmentum { e \pes d } \] s8 }
-
       \finalis 
     }
   >>
