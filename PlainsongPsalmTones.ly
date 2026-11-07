@@ -1,6 +1,11 @@
 \version "2.24.4"
 \include "gregorian.ly"
-\layout { ragged-right = ##t }
+\layout { ragged-right = ##t   
+}
+\paper {
+  #(set-paper-size '(cons (* 8.5	 in) (* 10 in)))
+}
+
 headLine = {
   \once \override NoteHead.stencil = #ly:text-interface::print
   \once \hide Stem
@@ -18,7 +23,12 @@ headLine = {
   }
 }
 
-
+\markup \fill-line {
+    \column
+    \override #'(padding . 20)
+    \override #'(baseline-skip . 12)
+    \table #'(0 0) {
+      
 \score {
   <<
     \new VaticanaVoice = "cantus" {
@@ -33,6 +43,14 @@ headLine = {
       \textMark "I.2"
       \headLine a g f \[ g \pes a\accentus \] \[ \cavum g \] \[ \augmentum { g \pes f } \]
       \finalis
+    }
+  >>
+}
+
+\score {
+  <<
+    \new VaticanaVoice = "cantus" {
+      \clef "vaticana-do3"
       
       \textMark "I.3"
       \headLine a g f g\accentus \[ \cavum g \] \[ g \pes a \flexa \augmentum g \] 
@@ -41,7 +59,15 @@ headLine = {
       \textMark "I.4"
       \headLine a g f g\accentus \[ \cavum a \] \augmentum a 
       \finalis
-      \break
+      
+    }
+  >>
+}
+
+\score {
+  <<
+    \new VaticanaVoice = "cantus" {
+      \clef "vaticana-do3"
       
       \textMark "I.7"
       \headLine a g f \[ g \pes a\accentus \] \[ \cavum g \] \[ g f e \augmentum { d } \]
@@ -117,7 +143,15 @@ headLine = {
       \textMark "IV.2"
       \relative { \headLine a g a b g\accentus \[ \cavum g \] \augmentum a }
       \finalis 
-      
+    }
+  >>
+}
+
+\score {
+  <<
+    \new VaticanaVoice = "cantus" {
+      \clef "vaticana-do3"
+          
       \textMark "IV.4"
       \relative { \headLine a g a b g\accentus \[ \cavum e \] \augmentum e }
       \finalis
@@ -185,7 +219,15 @@ headLine = {
       \textMark "VII.3"
       \relative { \headLine d' e\accentus \[ \cavum d \] d c\accentus \[ \cavum c \] \augmentum b }
       \finalis 
-      
+    }
+  >>
+}
+
+\score {
+  <<
+    \new VaticanaVoice = "cantus" {
+      \clef "vaticana-do3"
+          
       \textMark "VII.6"
       \relative { \headLine d' e\accentus \[ \cavum d \] d c\accentus \[ \cavum c \] \[ \augmentum { d \pes c } \] }
       \finalis
@@ -213,7 +255,15 @@ headLine = {
       \textMark "VIII.2"
       \relative { \headLine c' a c d\accentus \[ \cavum c \] \augmentum c }
       \finalis 
-      
+    }
+  >>
+}
+
+\score {
+  <<
+    \new VaticanaVoice = "cantus" {
+      \clef "vaticana-do3"
+          
       \textMark "VIII.3"
       \relative { \headLine c' b a c\accentus \[ \cavum c \] \augmentum c }
       \finalis 
@@ -243,4 +293,4 @@ headLine = {
     }
   >>
 }
-
+}}
