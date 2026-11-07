@@ -12,6 +12,7 @@ headLine = {
     \filled-box #'(0 . 2) #'(0 . 1) #0 } %% adjust x distance of 6 as necessary
 }
 
+%% Source: https://wiki.lilypond.community/wiki/Aligning_columns_from_different_markups
 #(define-markup-command (columns layout props args) (markup-list?)
    (let ((line-width (/ (chain-assoc-get 'line-width props
                          (ly:output-def-lookup layout 'line-width))
@@ -188,6 +189,7 @@ headLine = {
 }
 }
 
+% Uncomment to push second column to edge of page for double-sided printing
 % \column { }
 
 
