@@ -258,7 +258,7 @@ headLine = {
 \score {
   <<
     \new VaticanaVoice = "cantus" {
-      \clef "vaticana-do3"
+      \clef "vaticana-do1"
           
       \textMark "VII.6"
       \relative { \headLine d' e\accentus \[ \cavum d \] d c\accentus \[ \cavum c \] \[ \augmentum { d \pes c } \] }
@@ -298,7 +298,7 @@ headLine = {
 \score {
   <<
     \new VaticanaVoice = "cantus" {
-      \clef "vaticana-do3"
+      \clef "vaticana-do2"
           
       \textMark "VIII.3"
       \relative { \headLine c' b a c\accentus \[ \cavum c \] \augmentum c }
